@@ -1,6 +1,6 @@
 import React from 'react';
 
-let images = "https://source.unsplash.com/user"
+let images = "https://source.unsplash.com/aii/600x600"
 
 const Images = () => {
     return (

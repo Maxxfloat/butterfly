@@ -1,80 +1,128 @@
-
-html, body {
-display: flex;
-justify-content: center;
-height: 100%;
+.body {
+min-height: 100%;
 }
-body, div, h1, form, input, p { 
+.body, div, form, input, select, textarea, p { 
 padding: 0;
 margin: 0;
 outline: none;
 font-family: Roboto, Arial, sans-serif;
-font-size: 16px;
+font-size: 14px;
 color: #666;
+line-height: 22px;
 }
 h1 {
-padding: 10px 0;
+position: absolute;
+margin: 0;
 font-size: 32px;
-font-weight: 300;
-text-align: center;
+color: #000000;
+z-index: 2;
 }
-p {
-font-size: 12px;
-}
-hr {
-color: #a9a9a9;
-opacity: 0.3;
-}
-.main-block {
-max-width: 340px; 
-min-height: 460px; 
-padding: 10px 0;
-margin: auto;
-border-radius: 5px; 
-border: solid 1px #ccc;
-box-shadow: 1px 2px 5px rgba(0,0,0,.31); 
-background: #ebebeb; 
+.testbox {
+display: flex;
+justify-content: center;
+align-items: center;
+height: inherit;
+padding: 20px;
 }
 form {
-margin: 0 30px;
+width: 100%;
+padding: 20px;
+border-radius: 6px;
+background-image: linear-gradient(lightblue,pink);
+box-shadow: 0 0 30px 0 #8ebf42; 
 }
-.account-type, .gender {
-margin: 15px 0;
+.banner {
+position: relative;
+height: 110px;
+background-size: cover;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
 }
-input[type=radio] {
+p.top-info {
+margin: 10px 0;
+}
+input, select, textarea {
+margin-bottom: 10px;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+input {
+width: calc(100% - 10px);
+padding: 5px;
+}
+select {
+width: 100%;
+padding: 7px 0;
+background: transparent;
+}
+textarea {
+width: calc(100% - 12px);
+padding: 5px;
+}
+.item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+color: #8ebf42;
+}
+.item input:hover, .item select:hover, .item textarea:hover {
+border: 1px solid transparent;
+box-shadow: 0 0 8px 0 #8ebf42;
+color: #8ebf42;
+}
+.item {
+position: relative;
+margin: 10px 0;
+}
+input[type="date"]::-webkit-inner-spin-button {
 display: none;
 }
-label#icon {
-margin: 0;
-border-radius: 5px 0 0 5px;
+.item i, input[type="date"]::-webkit-calendar-picker-indicator {
+position: absolute;
+font-size: 20px;
+color: #a9a9a9;
+}
+.item i {
+right: 2%;
+top: 30px;
+z-index: 1;
+}
+[type="date"]::-webkit-calendar-picker-indicator {
+right: 1%;
+z-index: 2;
+opacity: 0;
+cursor: pointer;
+}
+input[type=radio] {
+width: 0;
+visibility: hidden;
 }
 label.radio {
 position: relative;
 display: inline-block;
-padding-top: 4px;
-margin-right: 20px;
-text-indent: 30px;
-overflow: visible;
+margin: 5px 20px 25px 0;
 cursor: pointer;
+}
+.question span {
+margin-left: 30px;
 }
 label.radio:before {
 content: "";
 position: absolute;
-top: 2px;
 left: 0;
-width: 20px;
-height: 20px;
+width: 17px;
+height: 17px;
 border-radius: 50%;
-background: #1c87c9;
+border: 2px solid #8ebf42;
 }
 label.radio:after {
 content: "";
 position: absolute;
-width: 9px;
+width: 8px;
 height: 4px;
-top: 8px;
-left: 4px;
-border: 3px solid #fff;
+top: 6px;
+left: 5px;
+background: transparent;
+border: 3px solid #8ebf42;
 border-top: none;
 border-right: none;
 transform: rotate(-45deg);
@@ -83,42 +131,33 @@ opacity: 0;
 input[type=radio]:checked + label:after {
 opacity: 1;
 }
-input[type=text], input[type=password] {
-width: calc(100% - 57px);
-height: 36px;
-margin: 13px 0 0 -5px;
-padding-left: 10px; 
-border-radius: 0 5px 5px 0;
-border: solid 1px #cbc9c9; 
-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-background: #fff; 
-}
-input[type=password] {
-margin-bottom: 15px;
-}
-#icon {
-display: inline-block;
-padding: 9.3px 15px;
-box-shadow: 1px 2px 5px rgba(0,0,0,.09); 
-background: #1c87c9;
-color: #fff;
-text-align: center;
-}
 .btn-block {
 margin-top: 10px;
 text-align: center;
 }
 button {
-width: 100%;
-padding: 10px 0;
-margin: 10px auto;
-border-radius: 5px; 
+width: 150px;
+padding: 10px;
 border: none;
-background: #1c87c9; 
-font-size: 14px;
-font-weight: 600;
+border-radius: 5px; 
+background: #8ebf42;
+font-size: 16px;
 color: #fff;
+cursor: pointer;
 }
 button:hover {
-background: #26a9e0;
+background: #82b534;
+}
+@media (min-width: 568px) {
+.name-item, .city-item {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+.name-item input, .city-item input {
+width: calc(50% - 20px);
+}
+.city-item select {
+width: calc(50% - 8px);
+}
 }
