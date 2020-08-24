@@ -1,10 +1,15 @@
-import react from 'react';
-import images from 'images';
+import React , {Component} from 'react';
+import Images from './Images';
 
-const gallery = () => {
-    return (
-        <div className="container">
-
-        </div>
-    )
+class Gallery extends Component {
+    render (){
+        return (
+            <div className="container">
+                <Images/>
+            </div>
+        )
+    }
+    
 }
+
+export default Gallery;
