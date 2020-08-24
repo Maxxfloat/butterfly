@@ -1,14 +1,13 @@
-import React , {Component} from 'react';
+import React from 'react';
 import Images from './Images';
 
-class Gallery extends Component {
-    render (){
-        return (
-            <div className="container">
-                <Images/>
-            </div>
-        )
-    }
+const Gallery= () => {
+    return (
+        <div className="container">
+            <Images/>
+        </div>
+    )
+    
     
 }
 

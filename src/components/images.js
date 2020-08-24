@@ -1,19 +1,14 @@
-import React , {Component} from 'react';
+import React from 'react';
 
-let wsize ="200";
-let hsize ="200"
-let images = `https://picsum.photos/${hsize}/${wsize}`;
+let images = "https://source.unsplash.com/user"
 
-class Images extends Component {
+const Images = () => {
+    return (
+        <div>
+            <img src={ images } alt ="dog"></img>
+        </div>
+    )
     
-
-    render (){
-        return (
-            <div>
-                <img src={ images } alt ="dog"></img>
-            </div>
-        )
-    }
     
 }
 
