@@ -1,15 +1,10 @@
 import React from 'react';
 
-let images = "https://source.unsplash.com/aii/600x600"
-
-const Images = () => {
+//photolink is property (destructur as prop.photolink) that set image url
+const Images = ({photolink}) => {
     return (
-        <div>
-            <img src={ images } alt ="dog"></img>
-        </div>
-    )
-    
-    
+        <img alt='dos' src={photolink}/>
+    ) 
 }
 
 export default Images;

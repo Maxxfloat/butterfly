@@ -1,12 +1,18 @@
 import React, {Component} from 'react';
-import Gallery from './components/Gallery';
-import Size from './components/Gettingsize';
+import Images from './components/Images'
+
+//photokink is property that get url to aply and i use it in image.js as property
 class App extends Component {
+  constructor (){
+    super()
+    this.state = {
+      photolink : ''
+    }
+  }
   render (){
     return (
       <div className="App">
-        <Size/>
-        {/* <Gallery/> */}
+        <Images photolink={this.state.photolink}/>
       </div>
     );
   }
