@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import Images from './components/Images'
 import Gettingsize from './components/Gettingsize';
 
-//photokink is property that get url to aply and i use it in image.js as property
 class App extends Component {
   constructor (){
     super()
@@ -10,7 +9,7 @@ class App extends Component {
       nameValue : '',
       widthValue :'',
       heightValue : '',
-      applyclicked : false,
+      path : ''
     }
   }
   handlenameValue = (event) => {
@@ -25,22 +24,28 @@ class App extends Component {
     console.log("handleheight");
     this.setState({heightValue: event.target.value})
   }
-  handleclick = () => {
-    console.log("didsumbit runs")
-    return this.setState({applyclicked : !this.state.applyclicked})
+  handleclick = (event) => {
+    console.log("handclick")
+    const {nameValue,widthValue} = this.state;
+    if (nameValue === '' || widthValue === ''){
+      this.setState({path : ''})
+    }
+    else {
+      return this.setState({path : `https://api.adorable.io/avatars/${widthValue}/${nameValue}`})
+    }
   }
   render (){
-    if (this.state.applyclicked === true){
-      return <Images applyclicked = {this.state.applyclicked}/>
-    }
+    
+    
     return (
       <div className="App">
         <Gettingsize 
-          handlenameVlue={this.handlenameValue} 
+          handlenameValue={this.handlenameValue} 
           handlewidth={this.handlewidth} 
           handleheight = {this.handleheight} 
           handleclick={this.handleclick}
         />
+        <Images path = {this.state.path}/>
       </div>      
     );
   }
