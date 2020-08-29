@@ -10,23 +10,38 @@ class App extends Component {
       nameValue : '',
       widthValue :'',
       heightValue : '',
+      applyclicked : false,
     }
   }
-  handlenameVlaue = (event) => {
-    this.setState({nameValue: event.target.value})
+  handlenameValue = (event) => {
+    console.log("handlenamevalue");
+    this.setState({nameValue: event.target.value});
   }
   handlewidth = (event) => {
+    console.log("handlewidth");
     this.setState({widthValue: event.target.value});
   }
   handleheight = (event) => {
+    console.log("handleheight");
     this.setState({heightValue: event.target.value})
   }
+  handleclick = () => {
+    console.log("didsumbit runs")
+    return this.setState({applyclicked : !this.state.applyclicked})
+  }
   render (){
+    if (this.state.applyclicked === true){
+      return <Images applyclicked = {this.state.applyclicked}/>
+    }
     return (
       <div className="App">
-        <Gettingsize handlenameVlaue={this.handlenameVlaue} handlewidth={this.handlewidth} handleheight = {this.handleheight}/>
-        <Images nameValue={this.state.nameValue} widthValue = {this.state.widthValue} heightValue = {this.state.heightValue} />
-      </div>
+        <Gettingsize 
+          handlenameVlue={this.handlenameValue} 
+          handlewidth={this.handlewidth} 
+          handleheight = {this.handleheight} 
+          handleclick={this.handleclick}
+        />
+      </div>      
     );
   }
 }

@@ -1,27 +1,27 @@
 import React from 'react';
 import './Gettingsize.css';
 
-const Gettingsize = ({handlenameValue,handlewidth,handleheight}) => {
+const Gettingsize = ({handlenameVlue,handlewidth,handleheight,handleclick}) => {
   return (
     <div className="body">
-        <div class="testbox">
-          <form >
-            <div class="banner">
+        <div className="testbox">
+          <form>
+            <div className="banner">
               <h1>Write Name And Size Of Image</h1>
             </div>
-            <div class="item">
+            <div className="item">
               <p>Name :</p>
-              <input type="text" name="name"/>
+              <input type="text" name="name" onChange={handlenameVlue}/>
             </div>
-            <div class="item">
+            <div className="item">
               <p>Size :</p>
-              <div class="name-item">
-                <input type="number" name="name" placeholder="Width" />
-                <input type="number" name="name" placeholder="Height" />
+              <div className="name-item">
+                <input type="number" name="name" placeholder="Width" onChange={handlewidth}/>
+                <input type="number" name="name" placeholder="Height" onChange={handleheight}/>
               </div>
             </div>
-            <div class="btn-block">
-              <button type="submit" href="/">Apply</button>
+            <div className="btn-block">
+              <button type="button" onClick={handleclick}>Apply</button>
             </div>
           </form>
         </div>
