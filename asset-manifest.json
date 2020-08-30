@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/butterfly/static/css/main.e212f064.chunk.css",
+    "main.js": "/butterfly/static/js/main.1a67ad40.chunk.js",
+    "main.js.map": "/butterfly/static/js/main.1a67ad40.chunk.js.map",
+    "runtime-main.js": "/butterfly/static/js/runtime-main.e76fee25.js",
+    "runtime-main.js.map": "/butterfly/static/js/runtime-main.e76fee25.js.map",
+    "static/css/2.3c03f26f.chunk.css": "/butterfly/static/css/2.3c03f26f.chunk.css",
+    "static/js/2.2bb6517b.chunk.js": "/butterfly/static/js/2.2bb6517b.chunk.js",
+    "static/js/2.2bb6517b.chunk.js.map": "/butterfly/static/js/2.2bb6517b.chunk.js.map",
+    "index.html": "/butterfly/index.html",
+    "precache-manifest.55258275744f3e53bff7fdda42dd30fe.js": "/butterfly/precache-manifest.55258275744f3e53bff7fdda42dd30fe.js",
+    "service-worker.js": "/butterfly/service-worker.js",
+    "static/css/2.3c03f26f.chunk.css.map": "/butterfly/static/css/2.3c03f26f.chunk.css.map",
+    "static/css/main.e212f064.chunk.css.map": "/butterfly/static/css/main.e212f064.chunk.css.map",
+    "static/js/2.2bb6517b.chunk.js.LICENSE.txt": "/butterfly/static/js/2.2bb6517b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e76fee25.js",
+    "static/css/2.3c03f26f.chunk.css",
+    "static/js/2.2bb6517b.chunk.js",
+    "static/css/main.e212f064.chunk.css",
+    "static/js/main.1a67ad40.chunk.js"
+  ]
+}
